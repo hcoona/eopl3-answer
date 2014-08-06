@@ -1,5 +1,7 @@
 #lang eopl
 
+(require "chap2-common.rkt")
+
 (provide empty-env
          empty-env?
          extend-env
@@ -15,7 +17,7 @@
   (cons (cons vars vals) env))
 (define (apply-env env search-var)
   (if (empty-env? env)
-      (eopl:error 'apply-env "No binding for ~s" search-var)
+      (report-no-binding-found search-var)
       (let ([saved-vars (caar env)]
             [saved-vals (cdar env)]
             [saved-env (cdr env)])
