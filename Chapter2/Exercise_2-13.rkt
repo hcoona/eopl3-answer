@@ -2,6 +2,11 @@
 
 (require "chap2-common.rkt")
 
+(provide empty-env
+         empty-env?
+         extend-env
+         apply-env)
+
 (define (empty-env)
   (list (lambda (search-var)
           (report-no-binding-found search-var))
