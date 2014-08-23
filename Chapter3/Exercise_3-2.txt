@@ -1,0 +1,1 @@
+(bool-var #t) is an ExpVal, however (num-val (expval->num val)) don't equal to val itself.
