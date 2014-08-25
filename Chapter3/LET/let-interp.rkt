@@ -4,6 +4,10 @@
            "let-expval.rkt"
            "let-parser.rkt")
   
+  (provide run
+           value-of-program
+           value-of)
+  
   ;; Page 71
   (define (run string)
     (value-of-program (scan&parse string)))
