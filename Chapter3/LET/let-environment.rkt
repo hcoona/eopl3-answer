@@ -1,9 +1,9 @@
 (module let-environment eopl
-  (require "environment.rkt")
+  (require "../environment.rkt")
   (require "let-expval.rkt")
   
   (provide init-env)
-  (provide (all-from-out "environment.rkt"))
+  (provide (all-from-out "../environment.rkt"))
   
   (define (init-env)
     (extend-env 'i (num-val 1)
