@@ -1,0 +1,5 @@
+neg-exp : Exp -> Exp
+
+(value-of exp1 \rho) = val1
+---------------------------------
+(value-of (neg-exp exp1) \rho) = (- val1)
