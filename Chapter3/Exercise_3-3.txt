@@ -1,0 +1,7 @@
+Because minus cannot easily swapped.
+
+`A - B` generally not equal to `B - A`
+
+but
+
+`A + B` always equal to `B + A`
