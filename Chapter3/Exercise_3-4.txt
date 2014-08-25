@@ -1,0 +1,15 @@
+(value-of (var-exp x) \rho) = 33
+---------------------------------
+(value-of (diff-exp (var-exp x) (num-val 11)) \rho) = 22
+----------------------------------------------------------------------+
+(value-of (zero-exp (diff-exp (var-exp x) (num-val 11))) \rho) = #f   | (value-of (var-exp y) \rho) = 22
+----------------------------------------------------------------------+----------------------------------
+(value-of (if-exp (zero-exp (diff-exp (var-exp x) (num-val 11)))      |
+                  (diff-exp (var-exp y) (num-val 2))                  |
+                  (diff-exp (var-exp y) (num-val 4))) \rho)           |
+= (value-of (diff-exp (var-exp y) (num-val 4)) \rho)                  | (value-of (diff-exp (var-exp y) (num-val 4)) \rho) = 18
+--------------------------------------------------------------------------------------------------------------------------------
+(value-of (if-exp (zero-exp (diff-exp (var-exp x) (num-val 11)))
+                  (diff-exp (var-exp y) (num-val 2))
+                  (diff-exp (var-exp y) (num-val 4))) \rho)
+= 18
